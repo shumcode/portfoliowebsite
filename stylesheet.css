@@ -2,9 +2,21 @@ html {
   box-sizing: border-box;
 }
 
-.navbarcontainer {
+.nav {
   background-color: lightblue;
+}
+
+.nav {
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbarcontainer {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -15,7 +27,7 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
-.nav a {
+.navbarcontainer a {
   text-decoration: none;
   color: orange;
   display: block;
@@ -29,7 +41,8 @@ body {
 }
 
 #page1, #page2, #page3 {
-  height: 1000px;
+  margin-top: 160px;
+  height: 1200px;
 }
 
 .navbar:hover {
@@ -163,6 +176,10 @@ footer {
   border-radius: 50%;
 }
 
+.nav h1 {
+  margin: 0;
+}
+
 .submit {
   background-color: lightblue;
   font-family: 'Raleway', sans-serif;
@@ -188,18 +205,27 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .header-container {
-    display: flex;
-    flex-flow: column wrap;
-  }
-  .header-container h1 {
-    order: 2;
-  }
-  .nav {
-    order: 1;
+  #page1, #page2, #page3 {
+    margin-top: 75px;
+    height: 1200px;
   }
   .navbarcontainer {
-    justify-content: flex-end;
+    order: 2;
+  }
+  .nav h1 {
+    margin-left: 10px;
+  }
+  .nav a {
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   .facts li {
     font-size: 1.35em;
